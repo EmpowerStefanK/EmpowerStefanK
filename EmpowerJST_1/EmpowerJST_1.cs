@@ -79,7 +79,7 @@ namespace EmpowerJST_1
 			}
 
 			var order = OrderFactory.CreateOrder("Order Hoegaarden");
-			order.Dispatch("Stefan Knaperek")
+			order.Dispatch("Stefan Knaperek");
 		}
 	}
 }
