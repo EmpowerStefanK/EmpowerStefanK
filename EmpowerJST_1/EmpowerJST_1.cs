@@ -69,7 +69,7 @@ namespace EmpowerJST_1
 		public void Run(IEngine engine)
 		{
 			engine.GenerateInformation("Hello World!")
-			// Changes
+			// Changes another change
 		}
 	}
 }
