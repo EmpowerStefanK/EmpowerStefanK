@@ -56,7 +56,8 @@ namespace EmpowerJST_1
 	using System.Globalization;
 	using System.Text;
 	using Skyline.DataMiner.Automation;
-	
+	using Skyline.DataMiner.Core.DataMinerSystem.Automation;
+
 	/// <summary>
 	/// Represents a DataMiner Automation script.
 	/// </summary>
@@ -68,8 +69,13 @@ namespace EmpowerJST_1
 		/// <param name="engine">Link with SLAutomation process.</param>
 		public void Run(IEngine engine)
 		{
-			engine.GenerateInformation("Hello World!")
-			// Changes another change
+			engine.GenerateInformation("Hello World!");
+			var myDms = engine.GetDms();
+
+			foreach (var element in myDms.GetElements())
+			{
+				engine.GenerateInformation(element.Name);
+			}
 		}
 	}
 }
